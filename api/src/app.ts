@@ -1,14 +1,12 @@
 import { createNodeWebSocket } from "@hono/node-ws";
 import { Hono } from "hono";
-import { Redis } from "ioredis";
 import { GameService } from "./services/GameService";
 import { zValidator } from "@hono/zod-validator";
 import { z } from "zod";
+import redisClient from "./config/redis";
 
 const app = new Hono();
-
-const redis = new Redis();
-const gameService = new GameService(redis);
+const gameService = new GameService(redisClient);
 
 const createGameSchema = z.object({
   maxPlayers: z.number().min(2).max(4),
