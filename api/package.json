@@ -1,0 +1,16 @@
+{
+  "name": "@typeit/api",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "tsx --watch ./src/index.ts"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.13.7",
+    "hono": "^4.6.10"
+  },
+  "devDependencies": {
+    "@total-typescript/tsconfig": "^1.0.4",
+    "tsx": "^4.19.2"
+  }
+}

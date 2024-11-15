@@ -1,0 +1,29 @@
+{
+  "name": "typeit",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev:api": "pnpm -F @typeit/api dev",
+    "dev:www": "pnpm -F @typeit/www dev",
+    "format": "prettier --check . --ignore-path .gitignore",
+    "lint": "eslint .",
+    "build:www": "tsc -b && vite build"
+  },
+  "devDependencies": {
+    "eslint": "^9.14.0",
+    "@eslint/compat": "^1.2.3",
+    "@eslint/js": "^9.14.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "globals": "^15.12.0",
+    "@ianvs/prettier-plugin-sort-imports": "^4.3.1",
+    "prettier": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.8",
+    "@tanstack/eslint-plugin-query": "^5.60.1",
+    "@total-typescript/tsconfig": "^1.0.4",
+    "typescript": "^5.6.3",
+    "typescript-eslint": "^8.14.0",
+    "@types/eslint__js": "^8.42.3"
+  },
+  "packageManager": "pnpm@8.15.4"
+}
